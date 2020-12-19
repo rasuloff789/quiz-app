@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+html{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  margin: 0;
+  font-family: 'PT Sans' , 'Arial' ,sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+.container{
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.context{
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.context > div{
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.context > div > p{
+  padding: 15px;
+  background-color: #22db7f;
+  border-radius: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.button {
+  margin: 0;
+  position: relative;
+  color: #eee;
+  padding: 10px;
+  background-color:#9bbba7 ;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 2.5px 0;
+  transition: .4s ease;
+}
+
+.button:hover{
+  background-color: #fbff00;
+  color: #444;
+}
+
+.button span {
+  flex-grow: 1;
+  
+}
+
+.button::before{
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 15px auto;
+  /* object-fit: cover; */
+}
+
+.button-box{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.btn-checked{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+}
+
+.btn-checked::before{
+  background-image: url(".//iconfinder_check_1814079.png");
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.btn-checked:hover{
+  background-color: #444;
+  color: #fff;
+}
+
+.result-btn{
+  padding: 15px;
+  background-color: #39f8ff;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin:  auto;
+  font-size: 24px;
+  border: none;
+}
+
+.result-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rerty-btn{
+  cursor: pointer;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 22px;
+  background-color: #ffd4d4;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.modal #root .container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-text{
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 15px;
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
 }
